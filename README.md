@@ -29,4 +29,26 @@ After you’ve cloned the starter code, learn how to create a gistLinks to an ex
 
 Once you have a better understanding of what these different parts of a regular expression do, you’ll need to explain what they do for a specific regex.
 
-Matching a Hex Value – /^#?([a-f0-9]{6}|[a-f0-9]{3})$/
+https://www.youtube.com/watch?v=9RksQ5YT7FM
+ 
+Matching a Hex Value 
+/^#?([a-f0-9]{6}|[a-f0-9]{3})$/
+
+The forward slashes / denote the beginning and the end of the regex expression. Let's focus on the values between the forward slashes. 
+
+^ symbol. For this hex value, the carat ^ indicates the start of the string or line. 
+# symbol. The # sign is a token that matches a # character. (character code 35)
+? symbol. This question mark (?) matches a number between 0 and 1 of the preceding token, which is #. 
+() The parentheses groups multiple expressions together so as to extract a substring or use a back reference. 
+[] Within the parentheses, there are square brackets. The square brackets contain a range of numbers (a-f) and/or case-sensitive letters (0-9). The brackets will match any single character in this range.
+- The hyphen represents a range of letters or numbers in a square bracket.
+{} The curly braces (in this particular case with the hex value) contain one number. This digit {n} indicates that that value inside the brackets [] occurs or matches exactly n times. 
+| The pipe symbol stands for alternation. It behaves like a boolean (values of true or false). It matches the expression before or after the | symbol.
+$ The dollar sign means "end." It matches the end of the string, in this case. 
+
+Let's explore regex quantifiers.
+[]{n} The value in the brackets occurs n times.
+[a-f0-9]{6} This number inside the bracket occurs 6 times. 
+[a-f0-9]{3} This number in the brackets occurs 3 times.
+
+
