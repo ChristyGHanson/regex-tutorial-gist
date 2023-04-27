@@ -1,6 +1,6 @@
 # Matching a Hex Value: A Regex Tutorial
 
-EXAMPLE DRAFT : This gist tutorial explains how to match a hex value, search and replace a hex value, and verify a hex value. 
+EXAMPLE DRAFT : This gist tutorial explains how to match a hex value as it relates to JavaScript. 
 
 ## Introductory Paragraph
 
@@ -15,25 +15,27 @@ A regular expression (regex) is a jumble of characters that web developers use t
 
 ## Table of Contents
 
-* [Tutorials](#tutorials)
+* [Tutorial](#tutorial)
 * [Hex Value Matching](#hex-value-matching)
-* [Search and Replace a Hex Value](#search-and-replace-a-hex-value)
-* [Verifying the Hex Value](#verifying-the-hex-value)
 * [About the Author](#about-the-author)
 
- ## Tutorials
+ ## Tutorial
 
+### 
 *  WHEN I read through each section of the tutorial, THEN I find a detailed explanation of what a specific component of the regex does
-*  * EACH section breaks down EACH COMPONENT of the regex AND EXPLAINS what it does for the hex value.
+*  EACH section breaks down EACH COMPONENT of the regex AND EXPLAINS what it does for the hex value.
 
-### Hex Value Matching 
+The forward slashes / denote the beginning and the end of a regex expression and will define a search pattern within JavaScript. Let's focus on the values between the forward slashes. 
+^ symbol. For this hex value, the carat ^ indicates the start of the string or line. 
 
-Let's define a search pattern using regex to search for a hex value. 
-
-* Who what when where why how
-1. one
-2. two
-3. three
+# symbol. The # sign is a token that matches a # character. (character code 35)
+? symbol. This question mark (?) matches a number between 0 and 1 of the preceding token, which is #. 
+() The parentheses groups multiple expressions together so as to extract a substring or use a back reference. 
+[] Within the parentheses, there are square brackets. The square brackets contain a range of numbers (a-f) and/or case-sensitive letters (0-9). The brackets will match any single character in this range.
+- The hyphen represents a range of letters or numbers in a square bracket.
+{} The curly braces (in this particular case with the hex value) contain one number. This digit {n} indicates that that value inside the brackets [] occurs or matches exactly n times. 
+| The pipe symbol stands for alternation. It behaves like a boolean (values of true or false). It matches the expression before or after the | symbol.
+$ The dollar sign means "end." It matches the end of the string, in this case. 
 
 ### Search and Replace a Hex Value
 
